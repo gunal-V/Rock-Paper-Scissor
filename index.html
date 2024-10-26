@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="
+      text-3xl bg-black text-white p-10 h-screen
+    ">
+      <div>Rock Paper Scissor</div>
+      <div class="text-6xl mt-20">
+        <button
+          onclick="startGame('Rock')"
+          class="rounded-full border-white border-2 px-7 py-10"
+        >
+          &#9994;
+        </button>
+        <button
+          onclick="startGame('Paper')"
+          class="rounded-full border-white border-2 px-7 py-10"
+        >
+          &#9995;
+        </button>
+        <button
+          onclick="startGame('Scissor')"
+          class="rounded-full border-white border-2 px-7 py-10"
+        >
+          &#9996;
+        </button>
+      </div>
+      <br />
+
+      <div>
+        <button
+          onclick="
+            score = {win:0, lose:0, tie:0};
+            displayResult();
+          "
+          class="rounded-full border-solid border-white border-2 px-7 py-3 mt-10"
+        >
+          Reset
+        </button>
+        <button
+          onclick="autoPlay();"
+          class="autoPlayButton rounded-full border-solid border-white border-2 px-7 py-3 mt-10"
+        >
+          Auto Play
+        </button>
+      </div>
+
+      <div class="mt-10 js-moves-container invisible">
+        Player <span class="myChoice inline-block text-6xl"></span>
+        <span class="computerChoice text-6xl"></span> Computer
+      </div>
+      <div>
+        <p class="result mt-10"></p>
+        <p class="score mt-10"></p>
+      </div>
+    </div>
+  </body>
+</html>
